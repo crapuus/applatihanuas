@@ -63,7 +63,9 @@ class Welcome extends CI_Controller
     public function hapus($id)
     {
         $post = Post::find($id);
-       redirect('Welcome/tampil');
+        $post->delete();
+
+        redirect('Welcome/tampil');
     }
 
     public function ubah($id)
